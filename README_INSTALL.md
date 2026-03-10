@@ -155,9 +155,9 @@ v2.2.2 ─▶ PHP + MySQL + Web Crypto API
 1. Clone the Repository
 
 ```bash
-   git clone https://github.com/jimboyz-js/password-manager-v2.2.2.git
+   git clone https://github.com/jimboyz-js/password-manager-public-v2.git
 
-   cd password-manager-v2.2.2
+   cd password-manager-public-v2
 ```
 
 Adjust accordingly to match the actual directory name.
@@ -204,19 +204,16 @@ Installer Steps:
 1. Welcome
 
 2. Server Requirements Check
-
    - PHP version
 
    - Required extensions
 
 3. SMTP Configuration
-
    - Email provider
 
    - App password (recommended)
 
 4. Database Configuration
-
    - Host
 
    - Database name
@@ -271,4 +268,21 @@ You are free to use, modify, and distribute it with attribution.
 
 Developed by `jimBoYz Ni ChOy`
 
-📧 Contact: saronasda@gmail.com
+📧 Contact: [https://jimboyz-myemail.web.app](https://jimboyz-myemail.web.app)
+
+## Public Repository Notice
+
+<!--Updated: 03-10-2026 Tue. 2:24 PM-->
+
+This repository contains a **public version** of the original Password Manager project created for learning and development purposes.
+
+Some modifications were made before publishing this repository, including:
+
+- Removal of sensitive _configuration_ details
+- Replacement of private credentials and test data
+- Removal of certain images, logos, and assets
+- Minor adjustments to project files for public sharing
+
+These changes were made to ensure security and privacy while still demonstrating the project's functionality and structure.
+
+The core features and functionality of the application remain the same as the original development version.
