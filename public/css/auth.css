@@ -1,0 +1,55 @@
+.main-container {
+    height: 100vh;
+}
+
+.form-container {
+    width: 310px;
+    padding: 1rem;
+    z-index: 100;
+}
+
+.form-container p {
+    text-align: center;
+}
+
+/* body {
+    background-image: url('../images/jimboyzLogo-10-29-2024.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-blend-mode: darken;
+} */
+
+.text-desc {
+    font-size: 1.1em;
+}
+
+.resend-timer {
+    font-size: .8em;
+}
+
+#timer.resend {
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.banner {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .banner img {
+    width: 180px;
+  }
+}
+
+@media (max-width: 767px) {
+    .banner {
+        display: none;
+    }
+}

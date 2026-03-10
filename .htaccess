@@ -1,0 +1,82 @@
+# ==========================
+
+# Root-level .htaccess
+
+# ==========================
+
+# Disable directory listing
+
+Options -Indexes
+
+# Prevent access to sensitive files
+
+<FilesMatch "(\.env|\.env.config|\.gitignore|\.sql|\.ini|\.log|\.sh|composer\.json|composer\.lock)$">
+Require all denied
+</FilesMatch>
+
+# Protect private folders
+
+# RedirectMatch 404 ^/(app|app/._|app/db|app/db/._)$
+
+# ==========================================
+
+# Deny access to private application folders
+
+# ==========================================
+
+RedirectMatch 404 ^/app(/.\*)?$
+
+# Send all requests to /public without showing it in the URL
+
+RewriteEngine On
+
+# Only rewrite if the request is not actually for something that exists in root
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Rewrite everything else to /public/
+
+RewriteRule ^(.\*)$ public/$1 [L]
+
+# ==========================================
+
+# Custom 404 page handling
+
+# ==========================================
+
+ErrorDocument 404 /404.html
+
+# Prevent direct access to 404.html
+
+<Files "404.html">
+Require all denied
+</Files>
+
+# =====Update: 01-01-2026 THU. 9:12 PM
+
+# Uncomment this to use.
+
+# Works with InfinityFree (a free PHP web hosting)
+
+# Above does not work with InfinityFree
+
+###########################################
+
+# Enable rewrite
+
+# RewriteEngine On
+
+# Route everything through public/
+
+# RewriteCond %{REQUEST_FILENAME} !-f
+
+# RewriteCond %{REQUEST_FILENAME} !-d
+
+# RewriteRule ^(.\*)$ public/$1 [L]
+
+# Custom 404 page
+
+# ErrorDocument 404 /public/404.html
+
+###########################################

@@ -1,0 +1,16 @@
+# ==========================
+# public/.htaccess
+# ==========================
+
+RewriteEngine On
+RewriteBase /
+
+# Prevent direct access to hidden or sensitive files
+<FilesMatch "^\.">
+    Require all denied
+</FilesMatch>
+
+# Pretty URL routing — if file or folder doesn’t exist, send to index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.php [QSA,L]

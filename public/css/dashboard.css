@@ -1,0 +1,61 @@
+/* Make table header sticky */
+.table-responsive {
+  max-height: 400px; /* Adjust height as needed */
+  overflow-y: auto;
+}
+thead th {
+  position: sticky;
+  top: 0;
+  background: #212529; /* Bootstrap .table-dark background */
+  color: #fff;
+  z-index: 2;
+}
+
+.form-search { 
+    margin-bottom: 10px; 
+    display: flex;
+}
+
+.form-search .search {
+    width: 270px;
+}
+
+.action-btn {
+    border: none;
+    background: none;
+    font-size: 1.2rem;
+}
+
+#btn-pagination {
+    border: none;
+    width: 2rem;
+}
+
+#logout, #add-user-account {
+    cursor: pointer;
+}
+
+.banner {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .banner img {
+    width: 180px;
+  }
+}
+
+@media (max-width: 767px) {
+    .banner {
+        display: none;
+    }
+    .container-fluid a {
+    font-size: 1em;
+  }
+  .container-fluid a img {
+    width: 25px;
+  }
+}

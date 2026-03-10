@@ -1,0 +1,9 @@
+#jimBoYz Ni ChOy!!!
+#created: 11-27-2025 Thu. 1:23 PM
+.env.backup
+.env
+.env_
+app/vendor
+dist
+build
+# install_pdo

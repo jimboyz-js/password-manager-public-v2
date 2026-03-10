@@ -1,0 +1,93 @@
+.main-container {
+    height: 100vh;
+}
+
+.form-container {
+    width: 310px;
+    padding: 1rem;
+    z-index: 100;
+}
+
+/* Error box styling */
+.error-box {
+  background-color: #3c0d0d;       /* Dark red background */
+  color: #f0f6fc;                  /* Light text */
+  border: 1px solid #f85149;       /* Bright red border */
+  border-radius: 6px;
+  padding: 10px 12px;
+  font-size: 14px;
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  width: 310px;
+  overflow: hidden;
+}
+
+/* Error text */
+.error-box span {
+  font-weight: 500;
+}
+
+/* Close button */
+.error-box .close-btn {
+  background: none;
+  border: 1px solid #f85149;
+  border-radius: 4px;
+  color: #f85149;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, color 0.2s;
+}
+
+.error-box .close-btn:hover {
+  background: #f85149;
+  color: #fff;
+}
+
+.show-login-feedback {
+    display: flex;
+}
+
+.sign-in-desc {
+    font-size: 1.1em;
+}
+
+.forgot {
+    font-size: .8em;
+}
+
+#change_password {
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.hide-bar {
+    display: none !important;
+}
+
+.banner {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .banner img {
+    width: 180px;
+  }
+}
+
+@media (max-width: 767px) {
+    .banner {
+        display: none;
+    }
+}

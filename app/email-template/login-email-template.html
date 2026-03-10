@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Email — Template</title>
+    <style>
+        body {
+            background-color: #000000;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #ffffff;
+        }
+
+        .container {
+            max-width: 480px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .code-box {
+            display: block;
+            width: 100%;
+            padding: 18px 0;
+            text-align: center;
+            font-size: 32px;
+            letter-spacing: 8px;
+            color: #ffffff;
+            border: 1px solid #2d72ff;
+            background-color: #071d4a4e;
+            border-radius: 8px;
+            margin: 25px 0;
+        }
+
+        p {
+            line-height: 1.6;
+            font-size: 15px;
+        }
+
+        .highlight {
+            background-color: #b18b00;
+            color: #fff;
+            padding: 0 4px;
+            border-radius: 3px;
+        }
+
+        a {
+            color: #4f8ff7;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>One more step to<br>log in to your account</h1>
+
+        <p>Hi {{USERNAME}},</p>
+
+        <p>
+            a verification code was requested to access your account, <span> <a href="{{LINK}}">Password Manager
+                    App</a>.</span>
+            Enter the code below within 5 minutes to continue.
+        </p>
+
+        <div class="code-box">
+            {{CODE}}
+        </div>
+
+        <p style="text-align:center; opacity:0.8;">
+            Don't share this code with anyone.
+        </p>
+
+        <h3>If someone asks for this code</h3>
+        <p>
+            Never share this <span class="highlight">code</span>, even if someone claims to be from support—doing so
+            could compromise your
+            account.
+        </p>
+
+        <h3>Didn't request this?</h3>
+        <p>
+            If this wasn’t you, we recommend ignoring this email — your vault will remain locked and secure.
+        </p>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,117 @@
+/* Override Bootstrap backdrop */
+/*
+Remove this CSS to avoid modal cover by blur. Version 2.2.2 (/c/693a71ed-f3c4-8321-b40b-09d49aa66836)
+Dec. 11, 2025 THU. 4:07 PM
+Remove the session bootstrap modal and use custom session modal.
+.modal-backdrop.show + .modal-backdrop.show {
+  z-index: 1999 !important;  / backdrop for second modal /
+} 
+*/
+
+/* Update: 12-16-2025 */
+.modal-backdrop.show + .modal-backdrop.show {
+  z-index: 1999 !important;
+} 
+
+/* Ensure all modals stay above the blur backdrop */
+
+/* Update: 12-16-2025 */
+/* .modal {
+  z-index: 2100 !important;
+} */
+
+/* Make sure the backdrop is always below the modal */
+
+/* Update: 12-16-2025 */
+/* .modal-backdrop {
+  z-index: 2000 !important;
+} */
+/* ****** */
+
+.js .modal-backdrop {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(7px) !important;
+  -webkit-backdrop-filter: blur(7px);
+
+  /* Update: 12-16-2025 */
+  z-index: 2000 !important;
+}
+
+.js .modal-backdrop.fade {
+  filter: alpha(opacity=1.2) !important;
+  opacity: 1.2 !important;
+}
+
+#loadingModal {
+  z-index: 2000 !important;   /* higher than Bootstrap default (1050–1060) */
+} 
+
+#graduallyLoadingModal {
+  z-index: 2500 !important;   /* higher than Bootstrap default (1050–1060) */
+}
+
+#customAlertModal {
+  z-index: 2000 !important;
+}
+
+.con {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.con .pass-con {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+}
+
+.con .pass-con input {
+  cursor: pointer;
+}
+
+/* Update: 12-16-2025
+   Custom session modal
+*/
+/* Fullscreen semi-transparent blur backdrop */
+.custom-session-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  display: none;        /* Hidden by default */
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;        /* Always above Bootstrap modals */
+}
+
+/* Modal box */
+.custom-session-modal-content {
+  background-color: #fff;
+  padding: 30px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+}
+
+.custom-session-modal-content h5 {
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.custom-session-modal-content p {
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.custom-session-modal-content button {
+  min-width: 80px;
+}

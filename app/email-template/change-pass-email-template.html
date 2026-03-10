@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Email — Template</title>
+    <style>
+        body {
+            background-color: #000000;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #ffffff;
+        }
+
+        .container {
+            max-width: 480px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .code-box {
+            display: block;
+            width: 100%;
+            padding: 18px 0;
+            text-align: center;
+            font-size: 32px;
+            letter-spacing: 8px;
+            color: #ffffff;
+            border: 1px solid #2d72ff;
+            background-color: #071d4a4e;
+            border-radius: 8px;
+            margin: 25px 0;
+        }
+
+        p {
+            line-height: 1.6;
+            font-size: 15px;
+        }
+
+        .highlight {
+            background-color: #b18b00;
+            color: #fff;
+            padding: 0 4px;
+            border-radius: 3px;
+        }
+
+        a {
+            color: #4f8ff7;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Hi USERNAME, a password reset was triggered for your Password Manager account. To verify the request, enter the
+        code below and complete the reset at LINK.
+        If this wasn’t you, we recommend ignoring this email — your vault will remain locked and secure. -->
+        <h1>One more step to<br>change your password</h1>
+
+        <p>Hi {{USERNAME}},</p>
+
+        <p>
+            a password reset was triggered for your <span> <a href="{{LINK}}">Password Manager account</a>.</span>
+            To verify the request, enter the
+            code below and complete the reset at <span> <a href="{{URL}}">{{URL}}</a></span>.
+            <!-- It will expire in 10 minutes -->
+        </p>
+
+        <div class="code-box">
+            <!-- 4 8 7 1 9 5 -->
+            {{CODE}}
+        </div>
+
+        <p style="text-align:center; opacity:0.8;">
+            Don't share this code with anyone.
+        </p>
+
+        <h3>If someone asks for this code</h3>
+        <p>
+            <!-- Don't share this with anyone, especially if they tell you they work for
+            <span class="highlight">Developer</span> or Programmer of this app. They may be trying to hack your account. -->
+
+            Never share this verification <span class="highlight">code</span>. Anyone requesting it, regardless of what
+            they claim, could be attempting
+            to compromise your account.
+        </p>
+
+        <h3>Didn't request this?</h3>
+        <p>
+            <!-- If you got this email but aren’t trying to reset your password, -->
+            If this wasn’t you, we recommend ignoring this email — your vault will remain locked and secure.
+            <!-- <a href="#">let us know</a>. You don't need to take any further steps. -->
+        </p>
+
+    </div>
+</body>
+
+</html>
